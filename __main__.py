@@ -1,4 +1,4 @@
-from .ex7.src import ex7, ex7_pca
+from ex7.src import ex7, ex7_pca
 
 
 def main():
