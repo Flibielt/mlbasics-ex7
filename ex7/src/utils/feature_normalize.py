@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def feature_normalize(X):
     """
     feature_normalize Normalizes the features in X
@@ -6,3 +9,10 @@ def feature_normalize(X):
         is 1. This is often a good preprocessing step to do when
         working with learning algorithms.
     """
+
+    mu = np.mean(X, axis=0)
+    X_norm = X - mu
+
+    sigma = np.std(X_norm, axis=0, ddof=1)
+    X_norm /= sigma
+    return X_norm, mu, sigma
