@@ -37,7 +37,9 @@ def ex7_pca():
     print('Visualizing example dataset for PCA.\n\n')
 
     # Load the dataset into the variable X
-    data = loadmat(os.path.join('Data', 'ex7data1.mat'))
+    data1_path = os.path.dirname(os.path.realpath(__file__)) + '/data/ex7data1.mat'
+    data1_path = data1_path.replace('\\', '/')
+    data = loadmat(data1_path)
     X = data['X']
 
     #  Visualize the example dataset
@@ -126,7 +128,9 @@ def ex7_pca():
     print('\nLoading face dataset.\n\n')
 
     #  Load Face dataset
-    data = loadmat(os.path.join('Data', 'ex7faces.mat'))
+    faces_path = os.path.dirname(os.path.realpath(__file__)) + '/data/ex7faces.mat'
+    faces_path = faces_path.replace('\\', '/')
+    data = loadmat(faces_path)
     X = data['X']
 
     #  Display the first 100 faces in the dataset
@@ -205,7 +209,9 @@ def ex7_pca():
     # Reload the image from the previous exercise and run K-Means on it
     # For this to work, you need to complete the K-Means assignment first
 
-    A = mpl.image.imread(os.path.join('Data', 'bird_small.png'))
+    bird_small_path = os.path.dirname(os.path.realpath(__file__)) + '/data/bird_small.png'
+    bird_small_path = bird_small_path.replace('\\', '/')
+    A = mpl.image.imread(bird_small_path)
     A /= 255
     X = A.reshape(-1, 3)
 

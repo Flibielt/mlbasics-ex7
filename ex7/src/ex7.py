@@ -37,7 +37,9 @@ def ex7():
     print('Finding closest centroids.\n\n')
 
     # Load an example dataset that we will be using
-    data = loadmat(os.path.join('Data', 'ex7data2.mat'))
+    data2_path = os.path.dirname(os.path.realpath(__file__)) + '/data/ex7data2.mat'
+    data2_path = data2_path.replace('\\', '/')
+    data = loadmat(data2_path)
     X = data['X']
 
     # Select an initial set of centroids
@@ -82,7 +84,7 @@ def ex7():
     print('\nRunning K-Means clustering on example dataset.\n\n')
 
     # Load an example dataset
-    data = loadmat(os.path.join('Data', 'ex7data2.mat'))
+    data = loadmat(data2_path)
 
     # Settings for running K-Means
     K = 3
@@ -120,7 +122,9 @@ def ex7():
 
     # Load an image of a bird
     # Change the file name and path to experiment with your own images
-    A = mpl.image.imread(os.path.join('Data', 'bird_small.png'))
+    bird_small_path = os.path.dirname(os.path.realpath(__file__)) + '/data/bird_small.png'
+    bird_small_path = bird_small_path.replace('\\', '/')
+    A = mpl.image.imread(bird_small_path)
     # ==========================================================
 
     # Divide by 255 so that all values are in the range 0 - 1
