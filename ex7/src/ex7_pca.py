@@ -75,6 +75,7 @@ def ex7_pca():
     ax.axis([0.5, 6.5, 2, 8])
     ax.set_aspect('equal')
     ax.grid(False)
+    pyplot.show(block=False)
 
     print('Top eigenvector: U[:, 0] = [{:.6f} {:.6f}]'.format(U[0, 0], U[1, 0]))
     print(' (you should expect to see [-0.707107 -0.707107])')
@@ -106,6 +107,8 @@ def ex7_pca():
     print('Approximation of the first example: [{:.6f} {:.6f}]'.format(X_rec[0, 0], X_rec[0, 1]))
     print('       (this value should be about  [-1.047419 -1.047419])')
 
+    pyplot.show(block=False)
+
     #  Plot the normalized dataset (returned from featureNormalize)
     fig, ax = pyplot.subplots(figsize=(5, 5))
     ax.plot(X_norm[:, 0], X_norm[:, 1], 'bo', ms=8, mec='b', mew=0.5)
@@ -135,6 +138,7 @@ def ex7_pca():
 
     #  Display the first 100 faces in the dataset
     display_data(X[:100, :], figsize=(8, 8))
+    pyplot.show()
 
     input('Program paused. Press enter to continue.\n')
 
@@ -154,6 +158,7 @@ def ex7_pca():
 
     #  Visualize the top 36 eigenvectors found
     display_data(U[:, :36].T, figsize=(8, 8))
+    pyplot.show()
 
     input('Program paused. Press enter to continue.\n')
 
@@ -194,6 +199,7 @@ def ex7_pca():
     # Display reconstructed data from only k eigenfaces
     display_data(X_rec[:100, :], figsize=(6, 6))
     pyplot.gcf().suptitle('Recovered faces')
+    pyplot.show()
     pass
 
     input('Program paused. Press enter to continue.\n')
@@ -232,6 +238,7 @@ def ex7_pca():
 
     ax.scatter(X[sel, 0], X[sel, 1], X[sel, 2], cmap='rainbow', c=idx[sel], s=8 ** 2)
     ax.set_title('Pixel dataset plotted in 3D.\nColor shows centroid memberships')
+    pyplot.show()
     pass
 
     """
@@ -251,5 +258,6 @@ def ex7_pca():
     ax.scatter(Z[sel, 0], Z[sel, 1], cmap='rainbow', c=idx[sel], s=64)
     ax.set_title('Pixel dataset plotted in 2D, using PCA for dimensionality reduction')
     ax.grid(False)
+    pyplot.show()
     pass
 

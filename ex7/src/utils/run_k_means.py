@@ -40,6 +40,7 @@ def run_k_means(X, centroids, findClosestCentroids, computeCentroids,
                              interval=500,
                              repeat_delay=2,
                              fargs=(X, centroid_history, idx_history))
+        pyplot.show(block=False)
         return centroids, idx, anim
 
     return centroids, idx

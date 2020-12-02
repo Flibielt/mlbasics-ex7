@@ -101,6 +101,7 @@ def ex7():
     centroids, idx, anim = run_k_means(X, initial_centroids,
                                        find_closest_centroids, compute_centroids, max_iters, True)
     anim
+    pyplot.show()
 
     print('\nK-Means Done.\n\n')
     input('Program paused. Press enter to continue.\n')
