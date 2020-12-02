@@ -2,7 +2,7 @@ from matplotlib import pyplot
 import numpy as np
 
 
-def display_data(X, example_width, figsize=(10, 10)):
+def display_data(X, example_width=None, figsize=(10, 10)):
     """
     display_data Display 2D data in a nice grid
         display_data(X, example_width) displays 2D data

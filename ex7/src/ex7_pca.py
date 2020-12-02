@@ -94,7 +94,7 @@ def ex7_pca():
 
     #  Plot the normalized dataset (returned from pca)
     fig = pyplot.subplots()
-    pyplot.plot(X_norm[:, 1], X_norm[:, 2], 'bo')
+    pyplot.plot(X_norm[:, 0], X_norm[:, 1], 'bo')
 
     #  Project the data onto K = 1 dimension
     K = 1
