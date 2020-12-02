@@ -22,5 +22,10 @@ def find_closest_centroids(X, centroids):
     #               closest to example i. Hence, it should be a value in the
     #               range 1..K
 
+    for i in np.arange(idx.size):
+        J = np.sqrt(np.sum(np.square(X[i] - centroids), axis=1))
+
+        idx[i] = np.argmin(J)
+
     # =============================================================
     return idx

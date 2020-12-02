@@ -18,5 +18,9 @@ def k_means_init_centroids(X, K):
     # Instructions: You should set centroids to randomly chosen examples from
     #               the dataset X
 
+    randidx = np.random.permutation(X.shape[0])
+    # Take the first K examples as centroids
+    centroids = X[randidx[:K], :]
+
     # =============================================================
     return centroids

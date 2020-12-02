@@ -23,5 +23,8 @@ def pca(X):
     # Note: When computing the covariance matrix, remember to divide by m (the
     #       number of examples).
 
+    sigma = (1 / m) * (X.T.dot(X))
+    U, S, V = np.linalg.svd(sigma)
+
     # ============================================================
     return U, S

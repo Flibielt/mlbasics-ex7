@@ -25,5 +25,8 @@ def compute_centroids(X, idx, K):
     #               should contain the mean of the data points assigned to
     #               centroid i.
 
+    for i in np.arange(K):
+        centroids[i] = np.mean(X[idx == i], axis=0)
+
     # =============================================================
     return centroids

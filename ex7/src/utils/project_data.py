@@ -21,5 +21,7 @@ def project_data(X, U, K):
     #                    x = X(i, :)';
     #                    projection_k = x' * U(:, k);
 
+    Z = np.dot(X, U[:, :K])
+
     # =============================================================
     return Z
